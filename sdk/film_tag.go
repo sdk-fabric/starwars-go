@@ -22,11 +22,11 @@ type FilmTag struct {
 
 
 // GetAll 
-func (client *FilmTag) GetAll(title string) (FilmCollection, error) {
+func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["title"] = title
+    queryParams["search"] = search
 
     var queryStructNames []string
 

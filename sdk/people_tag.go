@@ -22,11 +22,11 @@ type PeopleTag struct {
 
 
 // GetAll 
-func (client *PeopleTag) GetAll(name string) (PeopleCollection, error) {
+func (client *PeopleTag) GetAll(search string) (PeopleCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["name"] = name
+    queryParams["search"] = search
 
     var queryStructNames []string
 

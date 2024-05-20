@@ -22,12 +22,11 @@ type StarshipTag struct {
 
 
 // GetAll 
-func (client *StarshipTag) GetAll(name string, model string) (StarshipCollection, error) {
+func (client *StarshipTag) GetAll(search string) (StarshipCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["name"] = name
-    queryParams["model"] = model
+    queryParams["search"] = search
 
     var queryStructNames []string
 

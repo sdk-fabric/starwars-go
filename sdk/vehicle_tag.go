@@ -22,12 +22,11 @@ type VehicleTag struct {
 
 
 // GetAll 
-func (client *VehicleTag) GetAll(name string, model string) (VehicleCollection, error) {
+func (client *VehicleTag) GetAll(search string) (VehicleCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["name"] = name
-    queryParams["model"] = model
+    queryParams["search"] = search
 
     var queryStructNames []string
 

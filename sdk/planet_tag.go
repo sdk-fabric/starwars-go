@@ -22,11 +22,11 @@ type PlanetTag struct {
 
 
 // GetAll 
-func (client *PlanetTag) GetAll(name string) (PlanetCollection, error) {
+func (client *PlanetTag) GetAll(search string) (PlanetCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["name"] = name
+    queryParams["search"] = search
 
     var queryStructNames []string
 

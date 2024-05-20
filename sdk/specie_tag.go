@@ -22,11 +22,11 @@ type SpecieTag struct {
 
 
 // GetAll 
-func (client *SpecieTag) GetAll(name string) (SpecieCollection, error) {
+func (client *SpecieTag) GetAll(search string) (SpecieCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
-    queryParams["name"] = name
+    queryParams["search"] = search
 
     var queryStructNames []string
 
