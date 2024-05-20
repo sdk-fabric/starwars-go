@@ -21,7 +21,7 @@ type FilmTag struct {
 
 
 
-// GetAll 
+// GetAll Get all the film resources
 func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
     }
 }
 
-// Get 
+// Get Get a specific film resource
 func (client *FilmTag) Get(id string) (Film, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

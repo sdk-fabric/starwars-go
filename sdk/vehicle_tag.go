@@ -21,7 +21,7 @@ type VehicleTag struct {
 
 
 
-// GetAll 
+// GetAll Get all the vehicle resources
 func (client *VehicleTag) GetAll(search string) (VehicleCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *VehicleTag) GetAll(search string) (VehicleCollection, error) {
     }
 }
 
-// Get 
+// Get Get a specific vehicle resource
 func (client *VehicleTag) Get(id string) (Vehicle, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

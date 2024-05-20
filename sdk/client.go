@@ -57,16 +57,7 @@ func NewClient(baseUrl string, credentials sdkgen.CredentialsInterface) (*Client
 	}, nil
 }
 
-func Build(clientId string, clientSecret string, tokenStore sdkgen.TokenStoreInterface, scopes []string) (*Client, error) {
-    var credentials = sdkgen.OAuth2{
-        ClientId: clientId,
-        ClientSecret: clientSecret,
-        TokenUrl: "https://api.typehub.cloud/authorization/token",
-        AuthorizationUrl: "",
-        TokenStore: tokenStore,
-        Scopes: scopes,
-    }
-
+func Build(credentials sdkgen.CredentialsInterface) (*Client, error) {
     return NewClient("https://swapi.dev/api", credentials)
 }
 
