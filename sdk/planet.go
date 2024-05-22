@@ -5,7 +5,7 @@
 
 import "time"
 
-// A Planet resource is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
+// A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY.
 type Planet struct {
     Name string `json:"name"`
     Diameter string `json:"diameter"`

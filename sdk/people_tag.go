@@ -21,7 +21,7 @@ type PeopleTag struct {
 
 
 
-// GetAll Get all the people resources
+// GetAll Get all the people
 func (client *PeopleTag) GetAll(search string) (PeopleCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *PeopleTag) GetAll(search string) (PeopleCollection, error) {
     }
 }
 
-// Get Get a specific people resource
+// Get Get a specific people
 func (client *PeopleTag) Get(id string) (People, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

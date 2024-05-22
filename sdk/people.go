@@ -5,7 +5,7 @@
 
 import "time"
 
-// A People resource is an individual person or character within the Star Wars universe.
+// A People is an individual person or character within the Star Wars universe.
 type People struct {
     Name string `json:"name"`
     BirthYear string `json:"birth_year"`

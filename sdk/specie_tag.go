@@ -21,7 +21,7 @@ type SpecieTag struct {
 
 
 
-// GetAll Get all the species resources
+// GetAll Get all the species
 func (client *SpecieTag) GetAll(search string) (SpecieCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *SpecieTag) GetAll(search string) (SpecieCollection, error) {
     }
 }
 
-// Get Get a specific species resource
+// Get Get a specific specie
 func (client *SpecieTag) Get(id string) (Specie, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

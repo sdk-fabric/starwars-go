@@ -21,7 +21,7 @@ type PlanetTag struct {
 
 
 
-// GetAll Get all the planets resources
+// GetAll Get all the planets
 func (client *PlanetTag) GetAll(search string) (PlanetCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *PlanetTag) GetAll(search string) (PlanetCollection, error) {
     }
 }
 
-// Get Get a specific planets resource
+// Get Get a specific planet
 func (client *PlanetTag) Get(id string) (Planet, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

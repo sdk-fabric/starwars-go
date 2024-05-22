@@ -21,7 +21,7 @@ type StarshipTag struct {
 
 
 
-// GetAll Get all the starship resources
+// GetAll Get all the starships
 func (client *StarshipTag) GetAll(search string) (StarshipCollection, error) {
     pathParams := make(map[string]interface{})
 
@@ -72,7 +72,7 @@ func (client *StarshipTag) GetAll(search string) (StarshipCollection, error) {
     }
 }
 
-// Get Get a specific starship resource
+// Get Get a specific starship
 func (client *StarshipTag) Get(id string) (Starship, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id

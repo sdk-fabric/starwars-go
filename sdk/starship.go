@@ -5,7 +5,7 @@
 
 import "time"
 
-// A Starship resource is a single transport craft that has hyperdrive capability.
+// A Starship is a single transport craft that has hyperdrive capability.
 type Starship struct {
     Name string `json:"name"`
     Model string `json:"model"`
