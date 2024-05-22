@@ -57,7 +57,9 @@ func NewClient(baseUrl string, credentials sdkgen.CredentialsInterface) (*Client
 	}, nil
 }
 
-func Build(credentials sdkgen.CredentialsInterface) (*Client, error) {
+func Build() (*Client, error) {
+    var credentials = sdkgen.Anonymous{}
+
     return NewClient("https://swapi.dev/api", credentials)
 }
 

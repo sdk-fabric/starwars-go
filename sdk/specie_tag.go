@@ -72,7 +72,7 @@ func (client *SpecieTag) GetAll(search string) (SpecieCollection, error) {
     }
 }
 
-// Get Get a specific specie
+// Get Get a specific species
 func (client *SpecieTag) Get(id string) (Specie, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id
