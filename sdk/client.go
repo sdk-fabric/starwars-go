@@ -31,12 +31,12 @@ func (client *Client) Starship() *StarshipTag {
     return NewStarshipTag(client.internal.HttpClient, client.internal.Parser)
 }
 
-func (client *Client) Vehicle() *VehicleTag {
-    return NewVehicleTag(client.internal.HttpClient, client.internal.Parser)
+func (client *Client) Species() *SpeciesTag {
+    return NewSpeciesTag(client.internal.HttpClient, client.internal.Parser)
 }
 
-func (client *Client) Specie() *SpecieTag {
-    return NewSpecieTag(client.internal.HttpClient, client.internal.Parser)
+func (client *Client) Vehicle() *VehicleTag {
+    return NewVehicleTag(client.internal.HttpClient, client.internal.Parser)
 }
 
 func (client *Client) Planet() *PlanetTag {
