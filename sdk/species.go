@@ -5,7 +5,7 @@
 
 import "time"
 
-// A Species is a type of person or character within the Star Wars Universe.
+// A Species is a type of person or character within the Star Wars Universe
 type Species struct {
     Name string `json:"name"`
     Classification string `json:"classification"`

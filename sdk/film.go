@@ -5,7 +5,7 @@
 
 import "time"
 
-// A Film is a single film.
+// A Film is a single film
 type Film struct {
     Title string `json:"title"`
     EpisodeId int `json:"episode_id"`

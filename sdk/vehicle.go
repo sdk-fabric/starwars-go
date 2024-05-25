@@ -5,7 +5,7 @@
 
 import "time"
 
-// A Vehicle is a single transport craft that does not have hyperdrive capability.
+// A Vehicle is a single transport craft that does not have hyperdrive capability
 type Vehicle struct {
     Name string `json:"name"`
     Model string `json:"model"`
