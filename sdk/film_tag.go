@@ -8,7 +8,8 @@ import (
     
     "encoding/json"
     "errors"
-    "github.com/apioo/sdkgen-go"
+    "fmt"
+    
     "io"
     "net/http"
     "net/url"
@@ -57,19 +58,14 @@ func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response FilmCollection
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return FilmCollection{}, err
-        }
+        var data FilmCollection
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return FilmCollection{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return FilmCollection{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 // Get Get a specific film
@@ -108,20 +104,16 @@ func (client *FilmTag) Get(id string) (Film, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response Film
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return Film{}, err
-        }
+        var data Film
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return Film{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return Film{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
+
 
 
 

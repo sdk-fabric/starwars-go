@@ -8,7 +8,8 @@ import (
     
     "encoding/json"
     "errors"
-    "github.com/apioo/sdkgen-go"
+    "fmt"
+    
     "io"
     "net/http"
     "net/url"
@@ -57,19 +58,14 @@ func (client *SpeciesTag) GetAll(search string) (SpeciesCollection, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response SpeciesCollection
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return SpeciesCollection{}, err
-        }
+        var data SpeciesCollection
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return SpeciesCollection{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return SpeciesCollection{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 // Get Get a specific species
@@ -108,20 +104,16 @@ func (client *SpeciesTag) Get(id string) (Species, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response Species
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return Species{}, err
-        }
+        var data Species
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return Species{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return Species{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
+
 
 
 

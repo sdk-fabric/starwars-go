@@ -8,7 +8,8 @@ import (
     
     "encoding/json"
     "errors"
-    "github.com/apioo/sdkgen-go"
+    "fmt"
+    
     "io"
     "net/http"
     "net/url"
@@ -57,19 +58,14 @@ func (client *PeopleTag) GetAll(search string) (PeopleCollection, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response PeopleCollection
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return PeopleCollection{}, err
-        }
+        var data PeopleCollection
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return PeopleCollection{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return PeopleCollection{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 // Get Get a specific people
@@ -108,20 +104,16 @@ func (client *PeopleTag) Get(id string) (People, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response People
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return People{}, err
-        }
+        var data People
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return People{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return People{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
+
 
 
 

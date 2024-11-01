@@ -8,7 +8,8 @@ import (
     
     "encoding/json"
     "errors"
-    "github.com/apioo/sdkgen-go"
+    "fmt"
+    
     "io"
     "net/http"
     "net/url"
@@ -57,19 +58,14 @@ func (client *PlanetTag) GetAll(search string) (PlanetCollection, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response PlanetCollection
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return PlanetCollection{}, err
-        }
+        var data PlanetCollection
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return PlanetCollection{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return PlanetCollection{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 // Get Get a specific planet
@@ -108,20 +104,16 @@ func (client *PlanetTag) Get(id string) (Planet, error) {
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
-        var response Planet
-        err = json.Unmarshal(respBody, &response)
-        if err != nil {
-            return Planet{}, err
-        }
+        var data Planet
+        err := json.Unmarshal(respBody, &data)
 
-        return response, nil
+        return data, err
     }
 
-    switch resp.StatusCode {
-        default:
-            return Planet{}, errors.New("the server returned an unknown status code")
-    }
+    var statusCode = resp.StatusCode
+    return Planet{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
+
 
 
 

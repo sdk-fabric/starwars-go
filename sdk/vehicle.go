@@ -3,8 +3,6 @@
 // @see https://sdkgen.app
 
 
-import "time"
-
 // A Vehicle is a single transport craft that does not have hyperdrive capability
 type Vehicle struct {
     Name string `json:"name"`
@@ -21,6 +19,6 @@ type Vehicle struct {
     Films []string `json:"films"`
     Pilots []string `json:"pilots"`
     Url string `json:"url"`
-    Created time.Time `json:"created"`
-    Edited time.Time `json:"edited"`
+    Created string `json:"created"`
+    Edited string `json:"edited"`
 }

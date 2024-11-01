@@ -8,6 +8,7 @@ import (
     
     
     
+    
     "github.com/apioo/sdkgen-go"
     
     
@@ -57,9 +58,9 @@ func NewClient(baseUrl string, credentials sdkgen.CredentialsInterface) (*Client
 	}, nil
 }
 
-func Build() (*Client, error) {
+
+func BuildAnonymous() (*Client, error) {
     var credentials = sdkgen.Anonymous{}
 
     return NewClient("https://swapi.dev/api", credentials)
 }
-
