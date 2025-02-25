@@ -3,8 +3,6 @@
 // @see https://sdkgen.app
 
 
-import "time"
-
 // A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY
 type Planet struct {
     Name string `json:"name"`
@@ -19,6 +17,6 @@ type Planet struct {
     Residents []string `json:"residents"`
     Films []string `json:"films"`
     Url string `json:"url"`
-    Created time.Time `json:"created"`
-    Edited time.Time `json:"edited"`
+    Created string `json:"created"`
+    Edited string `json:"edited"`
 }

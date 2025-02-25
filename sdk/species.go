@@ -3,8 +3,6 @@
 // @see https://sdkgen.app
 
 
-import "time"
-
 // A Species is a type of person or character within the Star Wars Universe
 type Species struct {
     Name string `json:"name"`
@@ -20,6 +18,6 @@ type Species struct {
     People []string `json:"people"`
     Films []string `json:"films"`
     Url string `json:"url"`
-    Created time.Time `json:"created"`
-    Edited time.Time `json:"edited"`
+    Created string `json:"created"`
+    Edited string `json:"edited"`
 }
