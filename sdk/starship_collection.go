@@ -9,3 +9,4 @@ type StarshipCollection struct {
     Previous string `json:"previous"`
     Results []Starship `json:"results"`
 }
+

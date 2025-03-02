@@ -9,3 +9,4 @@ type FilmCollection struct {
     Previous string `json:"previous"`
     Results []Film `json:"results"`
 }
+

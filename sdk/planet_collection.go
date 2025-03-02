@@ -9,3 +9,4 @@ type PlanetCollection struct {
     Previous string `json:"previous"`
     Results []Planet `json:"results"`
 }
+

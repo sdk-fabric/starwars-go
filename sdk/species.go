@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A Species is a type of person or character within the Star Wars Universe
 type Species struct {
     Name string `json:"name"`
@@ -21,3 +22,4 @@ type Species struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

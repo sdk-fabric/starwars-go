@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY
 type Planet struct {
     Name string `json:"name"`
@@ -20,3 +21,4 @@ type Planet struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

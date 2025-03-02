@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A Vehicle is a single transport craft that does not have hyperdrive capability
 type Vehicle struct {
     Name string `json:"name"`
@@ -22,3 +23,4 @@ type Vehicle struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

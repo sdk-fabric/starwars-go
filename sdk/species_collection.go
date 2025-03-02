@@ -9,3 +9,4 @@ type SpeciesCollection struct {
     Previous string `json:"previous"`
     Results []Species `json:"results"`
 }
+

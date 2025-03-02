@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A Starship is a single transport craft that has hyperdrive capability
 type Starship struct {
     Name string `json:"name"`
@@ -24,3 +25,4 @@ type Starship struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

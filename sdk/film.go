@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A Film is a single film
 type Film struct {
     Title string `json:"title"`
@@ -20,3 +21,4 @@ type Film struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

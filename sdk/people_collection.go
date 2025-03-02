@@ -9,3 +9,4 @@ type PeopleCollection struct {
     Previous string `json:"previous"`
     Results []People `json:"results"`
 }
+

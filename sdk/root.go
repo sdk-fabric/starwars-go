@@ -11,3 +11,4 @@ type Root struct {
     Starships string `json:"starships"`
     Vehicles string `json:"vehicles"`
 }
+

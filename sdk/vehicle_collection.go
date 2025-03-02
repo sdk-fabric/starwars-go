@@ -9,3 +9,4 @@ type VehicleCollection struct {
     Previous string `json:"previous"`
     Results []Vehicle `json:"results"`
 }
+

@@ -3,6 +3,7 @@
 // @see https://sdkgen.app
 
 
+
 // A People is an individual person or character within the Star Wars universe
 type People struct {
     Name string `json:"name"`
@@ -22,3 +23,4 @@ type People struct {
     Created string `json:"created"`
     Edited string `json:"edited"`
 }
+

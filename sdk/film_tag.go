@@ -9,7 +9,7 @@ import (
     "encoding/json"
     "errors"
     "fmt"
-    
+    "github.com/apioo/sdkgen-go/v2"
     "io"
     "net/http"
     "net/url"
@@ -23,7 +23,7 @@ type FilmTag struct {
 
 
 // GetAll Get all the films
-func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
+func (client *FilmTag) GetAll(search string) (*FilmCollection, error) {
     pathParams := make(map[string]interface{})
 
     queryParams := make(map[string]interface{})
@@ -33,7 +33,7 @@ func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
 
     u, err := url.Parse(client.internal.Parser.Url("/films", pathParams))
     if err != nil {
-        return FilmCollection{}, err
+        return nil, err
     }
 
     u.RawQuery = client.internal.Parser.QueryWithStruct(queryParams, queryStructNames).Encode()
@@ -41,35 +41,35 @@ func (client *FilmTag) GetAll(search string) (FilmCollection, error) {
 
     req, err := http.NewRequest("GET", u.String(), nil)
     if err != nil {
-        return FilmCollection{}, err
+        return nil, err
     }
 
 
     resp, err := client.internal.HttpClient.Do(req)
     if err != nil {
-        return FilmCollection{}, err
+        return nil, err
     }
 
     defer resp.Body.Close()
 
     respBody, err := io.ReadAll(resp.Body)
     if err != nil {
-        return FilmCollection{}, err
+        return nil, err
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
         var data FilmCollection
         err := json.Unmarshal(respBody, &data)
 
-        return data, err
+        return &data, err
     }
 
     var statusCode = resp.StatusCode
-    return FilmCollection{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
+    return nil, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 // Get Get a specific film
-func (client *FilmTag) Get(id string) (Film, error) {
+func (client *FilmTag) Get(id string) (*Film, error) {
     pathParams := make(map[string]interface{})
     pathParams["id"] = id
 
@@ -79,7 +79,7 @@ func (client *FilmTag) Get(id string) (Film, error) {
 
     u, err := url.Parse(client.internal.Parser.Url("/films/:id", pathParams))
     if err != nil {
-        return Film{}, err
+        return nil, err
     }
 
     u.RawQuery = client.internal.Parser.QueryWithStruct(queryParams, queryStructNames).Encode()
@@ -87,31 +87,31 @@ func (client *FilmTag) Get(id string) (Film, error) {
 
     req, err := http.NewRequest("GET", u.String(), nil)
     if err != nil {
-        return Film{}, err
+        return nil, err
     }
 
 
     resp, err := client.internal.HttpClient.Do(req)
     if err != nil {
-        return Film{}, err
+        return nil, err
     }
 
     defer resp.Body.Close()
 
     respBody, err := io.ReadAll(resp.Body)
     if err != nil {
-        return Film{}, err
+        return nil, err
     }
 
     if resp.StatusCode >= 200 && resp.StatusCode < 300 {
         var data Film
         err := json.Unmarshal(respBody, &data)
 
-        return data, err
+        return &data, err
     }
 
     var statusCode = resp.StatusCode
-    return Film{}, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
+    return nil, errors.New(fmt.Sprint("The server returned an unknown status code: ", statusCode))
 }
 
 

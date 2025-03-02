@@ -8,3 +8,4 @@ type Collection struct {
     Next string `json:"next"`
     Previous string `json:"previous"`
 }
+
