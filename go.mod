@@ -1,4 +1,4 @@
-module github.com/sdk-fabric/starwars
+module github.com/sdk-fabric/starwars-go
 
 go 1.18
 
