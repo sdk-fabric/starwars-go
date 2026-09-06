@@ -1,32 +1,54 @@
 
-# Starwars SDK
+# starwars-go
 
-This SDK is managed by the [SDK Fabric](https://sdk-fabric.org/) project.
-Our goal is to build a global infrastructure to automatically generate
-an SDK for every API, please take a look at our website for more information.
+This [SDK](https://github.com/sdk-fabric/starwars-go) is managed by the [SDK Fabric](https://sdk-fabric.org/) project, a global infrastructure to
+automatically generate SDKs for every API.
 
-## Contribution
-
-Please do not create a pull requests at this repository since the code is
-automatically generated. If an operation or type is missing at the client SDK
-please register at the [TypeHub](https://typehub.cloud/) platform and create
-a pull request at the [Starwars](https://app.typehub.cloud/d/sdkfabric/starwars)
-specification. The system will then automatically create a GIT commit and update
-the code.
+You can find more information about this SDK at [TypeHub](https://typehub.cloud/):
+https://app.typehub.cloud/d/sdkfabric/starwars
 
 ## Usage
 
-The following example shows how you initialize the client:
-
 ```go
 import (
-	"github.com/sdkfabric/starwars/sdk"
+	"github.com/sdk-fabric/starwars-go/sdk"
 )
 
 var client, _ = sdk.Build("[access_token]");
 
-// @TODO use the client
-```
+// Get all the people.
+response, err := client.People().Getall("search")
 
-You can find all available operations and types at:
-https://app.typehub.cloud/d/sdkfabric/starwars
+// Get a specific people.
+response, err := client.People().Get("id")
+
+// Get all the films.
+response, err := client.Film().Getall("search")
+
+// Get a specific film.
+response, err := client.Film().Get("id")
+
+// Get all the starships.
+response, err := client.Starship().Getall("search")
+
+// Get a specific starship.
+response, err := client.Starship().Get("id")
+
+// Get all the species.
+response, err := client.Species().Getall("search")
+
+// Get a specific species.
+response, err := client.Species().Get("id")
+
+// Get all the vehicles.
+response, err := client.Vehicle().Getall("search")
+
+// Get a specific vehicle.
+response, err := client.Vehicle().Get("id")
+
+// Get all the planets.
+response, err := client.Planet().Getall("search")
+
+// Get a specific planet.
+response, err := client.Planet().Get("id")
+```
