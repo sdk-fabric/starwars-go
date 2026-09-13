@@ -17,38 +17,38 @@ import (
 var client, _ = sdk.Build("[access_token]");
 
 // Get all the people.
-response, err := client.People().Getall("search")
+response, err := client.People().getAll("search")
 
 // Get a specific people.
-response, err := client.People().Get("id")
+response, err := client.People().get("id")
 
 // Get all the films.
-response, err := client.Film().Getall("search")
+response, err := client.Film().getAll("search")
 
 // Get a specific film.
-response, err := client.Film().Get("id")
+response, err := client.Film().get("id")
 
 // Get all the starships.
-response, err := client.Starship().Getall("search")
+response, err := client.Starship().getAll("search")
 
 // Get a specific starship.
-response, err := client.Starship().Get("id")
+response, err := client.Starship().get("id")
 
 // Get all the species.
-response, err := client.Species().Getall("search")
+response, err := client.Species().getAll("search")
 
 // Get a specific species.
-response, err := client.Species().Get("id")
+response, err := client.Species().get("id")
 
 // Get all the vehicles.
-response, err := client.Vehicle().Getall("search")
+response, err := client.Vehicle().getAll("search")
 
 // Get a specific vehicle.
-response, err := client.Vehicle().Get("id")
+response, err := client.Vehicle().get("id")
 
 // Get all the planets.
-response, err := client.Planet().Getall("search")
+response, err := client.Planet().getAll("search")
 
 // Get a specific planet.
-response, err := client.Planet().Get("id")
+response, err := client.Planet().get("id")
 ```
