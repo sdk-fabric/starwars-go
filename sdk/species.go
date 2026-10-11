@@ -6,20 +6,20 @@
 
 // A Species is a type of person or character within the Star Wars Universe
 type Species struct {
-    Name string `json:"name"`
-    Classification string `json:"classification"`
-    Designation string `json:"designation"`
     AverageHeight string `json:"average_height"`
     AverageLifespan string `json:"average_lifespan"`
-    EyeColors string `json:"eye_colors"`
-    HairColors string `json:"hair_colors"`
-    SkinColors string `json:"skin_colors"`
-    Language string `json:"language"`
-    Homeworld string `json:"homeworld"`
-    People []string `json:"people"`
-    Films []string `json:"films"`
-    Url string `json:"url"`
+    Classification string `json:"classification"`
     Created string `json:"created"`
+    Designation string `json:"designation"`
     Edited string `json:"edited"`
+    EyeColors string `json:"eye_colors"`
+    Films []string `json:"films"`
+    HairColors string `json:"hair_colors"`
+    Homeworld string `json:"homeworld"`
+    Language string `json:"language"`
+    Name string `json:"name"`
+    People []string `json:"people"`
+    SkinColors string `json:"skin_colors"`
+    Url string `json:"url"`
 }
 

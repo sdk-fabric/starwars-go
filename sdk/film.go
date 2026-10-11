@@ -6,19 +6,19 @@
 
 // A Film is a single film
 type Film struct {
-    Title string `json:"title"`
+    Characters []string `json:"characters"`
+    Created string `json:"created"`
+    Director string `json:"director"`
+    Edited string `json:"edited"`
     EpisodeId int `json:"episode_id"`
     OpeningCrawl string `json:"opening_crawl"`
-    Director string `json:"director"`
+    Planets []string `json:"planets"`
     Producer string `json:"producer"`
     ReleaseDate string `json:"release_date"`
     Species []string `json:"species"`
     Starships []string `json:"starships"`
-    Vehicles []string `json:"vehicles"`
-    Characters []string `json:"characters"`
-    Planets []string `json:"planets"`
+    Title string `json:"title"`
     Url string `json:"url"`
-    Created string `json:"created"`
-    Edited string `json:"edited"`
+    Vehicles []string `json:"vehicles"`
 }
 

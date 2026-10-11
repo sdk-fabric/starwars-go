@@ -6,21 +6,21 @@
 
 // A People is an individual person or character within the Star Wars universe
 type People struct {
-    Name string `json:"name"`
     BirthYear string `json:"birth_year"`
+    Created string `json:"created"`
+    Edited string `json:"edited"`
     EyeColor string `json:"eye_color"`
+    Films []string `json:"films"`
     Gender string `json:"gender"`
     HairColor string `json:"hair_color"`
     Height string `json:"height"`
-    Mass string `json:"mass"`
-    SkinColor string `json:"skin_color"`
     Homeworld string `json:"homeworld"`
-    Films []string `json:"films"`
+    Mass string `json:"mass"`
+    Name string `json:"name"`
+    SkinColor string `json:"skin_color"`
     Species []string `json:"species"`
     Starships []string `json:"starships"`
-    Vehicles []string `json:"vehicles"`
     Url string `json:"url"`
-    Created string `json:"created"`
-    Edited string `json:"edited"`
+    Vehicles []string `json:"vehicles"`
 }
 

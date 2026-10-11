@@ -6,23 +6,23 @@
 
 // A Starship is a single transport craft that has hyperdrive capability
 type Starship struct {
-    Name string `json:"name"`
-    Model string `json:"model"`
-    StarshipClass string `json:"starship_class"`
-    Manufacturer string `json:"manufacturer"`
-    CostInCredits string `json:"cost_in_credits"`
-    Length string `json:"length"`
-    Crew string `json:"crew"`
-    Passengers string `json:"passengers"`
-    MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
-    HyperdriveRating string `json:"hyperdrive_rating"`
     MGLT string `json:"MGLT"`
     CargoCapacity string `json:"cargo_capacity"`
     Consumables string `json:"consumables"`
-    Films []string `json:"films"`
-    Pilots []string `json:"pilots"`
-    Url string `json:"url"`
+    CostInCredits string `json:"cost_in_credits"`
     Created string `json:"created"`
+    Crew string `json:"crew"`
     Edited string `json:"edited"`
+    Films []string `json:"films"`
+    HyperdriveRating string `json:"hyperdrive_rating"`
+    Length string `json:"length"`
+    Manufacturer string `json:"manufacturer"`
+    MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
+    Model string `json:"model"`
+    Name string `json:"name"`
+    Passengers string `json:"passengers"`
+    Pilots []string `json:"pilots"`
+    StarshipClass string `json:"starship_class"`
+    Url string `json:"url"`
 }
 

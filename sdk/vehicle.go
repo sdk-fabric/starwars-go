@@ -6,21 +6,21 @@
 
 // A Vehicle is a single transport craft that does not have hyperdrive capability
 type Vehicle struct {
-    Name string `json:"name"`
-    Model string `json:"model"`
-    VehicleClass string `json:"vehicle_class"`
-    Manufacturer string `json:"manufacturer"`
-    Length string `json:"length"`
-    CostInCredits string `json:"cost_in_credits"`
-    Crew string `json:"crew"`
-    Passengers string `json:"passengers"`
-    MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
     CargoCapacity string `json:"cargo_capacity"`
     Consumables string `json:"consumables"`
+    CostInCredits string `json:"cost_in_credits"`
+    Created string `json:"created"`
+    Crew string `json:"crew"`
+    Edited string `json:"edited"`
     Films []string `json:"films"`
+    Length string `json:"length"`
+    Manufacturer string `json:"manufacturer"`
+    MaxAtmospheringSpeed string `json:"max_atmosphering_speed"`
+    Model string `json:"model"`
+    Name string `json:"name"`
+    Passengers string `json:"passengers"`
     Pilots []string `json:"pilots"`
     Url string `json:"url"`
-    Created string `json:"created"`
-    Edited string `json:"edited"`
+    VehicleClass string `json:"vehicle_class"`
 }
 

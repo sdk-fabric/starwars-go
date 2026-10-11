@@ -20,28 +20,28 @@ type Client struct {
     internal *sdkgen.ClientAbstract
 }
 
-func (client *Client) People() *PeopleTag {
-    return NewPeopleTag(client.internal.HttpClient, client.internal.Parser)
-}
-
 func (client *Client) Film() *FilmTag {
     return NewFilmTag(client.internal.HttpClient, client.internal.Parser)
 }
 
-func (client *Client) Starship() *StarshipTag {
-    return NewStarshipTag(client.internal.HttpClient, client.internal.Parser)
+func (client *Client) People() *PeopleTag {
+    return NewPeopleTag(client.internal.HttpClient, client.internal.Parser)
+}
+
+func (client *Client) Planet() *PlanetTag {
+    return NewPlanetTag(client.internal.HttpClient, client.internal.Parser)
 }
 
 func (client *Client) Species() *SpeciesTag {
     return NewSpeciesTag(client.internal.HttpClient, client.internal.Parser)
 }
 
-func (client *Client) Vehicle() *VehicleTag {
-    return NewVehicleTag(client.internal.HttpClient, client.internal.Parser)
+func (client *Client) Starship() *StarshipTag {
+    return NewStarshipTag(client.internal.HttpClient, client.internal.Parser)
 }
 
-func (client *Client) Planet() *PlanetTag {
-    return NewPlanetTag(client.internal.HttpClient, client.internal.Parser)
+func (client *Client) Vehicle() *VehicleTag {
+    return NewVehicleTag(client.internal.HttpClient, client.internal.Parser)
 }
 
 

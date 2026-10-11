@@ -6,19 +6,19 @@
 
 // A Planet is a large mass, planet or planetoid in the Star Wars Universe, at the time of 0 ABY
 type Planet struct {
-    Name string `json:"name"`
-    Diameter string `json:"diameter"`
-    RotationPeriod string `json:"rotation_period"`
-    OrbitalPeriod string `json:"orbital_period"`
-    Gravity string `json:"gravity"`
-    Population string `json:"population"`
     Climate string `json:"climate"`
-    Terrain string `json:"terrain"`
-    SurfaceWater string `json:"surface_water"`
-    Residents []string `json:"residents"`
-    Films []string `json:"films"`
-    Url string `json:"url"`
     Created string `json:"created"`
+    Diameter string `json:"diameter"`
     Edited string `json:"edited"`
+    Films []string `json:"films"`
+    Gravity string `json:"gravity"`
+    Name string `json:"name"`
+    OrbitalPeriod string `json:"orbital_period"`
+    Population string `json:"population"`
+    Residents []string `json:"residents"`
+    RotationPeriod string `json:"rotation_period"`
+    SurfaceWater string `json:"surface_water"`
+    Terrain string `json:"terrain"`
+    Url string `json:"url"`
 }
 
